@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JJO Legal · Teamjjoiencrzimsg</title>
+    <!-- Font Awesome (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9fafc;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        /* main container */
+        .portfolio {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        /* header section */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(15, 23, 42, 0.08);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-icon {
+            background: #0b2b5c;
+            color: #f5e7c8;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease;
+        }
+
+        .brand-icon i {
+            font-size: 1.9rem;
+        }
+
+        .brand-text h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b2b5c;
+            line-height: 1.2;
+        }
+
+        .brand-text .tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #5f6c80;
+            background: #eef2f6;
+            padding: 0.2rem 0.7rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .contact-info a {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-info a i {
+            color: #b38b4c;
+            font-size: 1.1rem;
+            width: 18px;
+        }
+
+        .contact-info a:hover {
+            color: #0b2b5c;
+            border-bottom-color: #b38b4c;
+        }
+
+        /* hero / intro */
+        .hero {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.8rem 3rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero-content {
+            flex: 2 1 300px;
+        }
+
+        .hero-content .eyebrow {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #b38b4c;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-content h2 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0b2b5c;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-content h2 span {
+            color: #b38b4c;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #334155;
+            max-width: 600px;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0b2b5c;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #5f6c80;
+            font-weight: 500;
+        }
+
+        .hero-badge {
+            flex: 0 0 auto;
+            background: #f0f4fa;
+            border-radius: 200px;
+            padding: 1rem 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #dce3ec;
+        }
+
+        .hero-badge i {
+            font-size: 2.2rem;
+            color: #b38b4c;
+        }
+
+        .hero-badge span {
+            font-weight: 600;
+            color: #0b2b5c;
+            font-size: 1rem;
+        }
+
+        /* section title */
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #0b2b5c;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #b38b4c;
+            font-size: 1.5rem;
+        }
+
+        .section-sub {
+            color: #5f6c80;
+            margin-bottom: 2.2rem;
+            font-size: 1rem;
+            max-width: 700px;
+        }
+
+        /* practice areas grid */
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 4rem;
+        }
+
+        .practice-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eaedf2;
+            transition: all 0.25s ease;
+            text-align: left;
+        }
+
+        .practice-card:hover {
+            transform: translateY(-4px);
+            border-color: #b38b4c;
+            box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.08);
+        }
+
+        .practice-icon {
+            background: #f0f4fa;
+            color: #0b2b5c;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .practice-card:hover .practice-icon {
+            background: #0b2b5c;
+            color: #f5e7c8;
+        }
+
+        .practice-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: #0b2b5c;
+        }
+
+        .practice-card p {
+            font-size: 0.92rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* team / portfolio grid — this is the core “portfolio” for legal service */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eaedf2;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 28px 36px -12px rgba(0, 0, 0, 0.1);
+            border-color: #cfd8e4;
+        }
+
+        .team-avatar {
+            background: linear-gradient(145deg, #eef2f8, #e2e8f2);
+            padding: 2rem 1.5rem 1rem;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .team-avatar i {
+            font-size: 5.5rem;
+            color: #0b2b5c;
+            opacity: 0.85;
+            filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.02));
+        }
+
+        .team-info {
+            padding: 1.5rem 1.5rem 1.8rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-info h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0b2b5c;
+            margin-bottom: 0.15rem;
+        }
+
+        .team-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #b38b4c;
+            margin-bottom: 0.9rem;
+        }
+
+        .team-info p {
+            font-size: 0.92rem;
+            color: #475569;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .team-contact {
+            display: flex;
+            gap: 0.8rem;
+            border-top: 1px solid #eef2f6;
+            padding-top: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .team-contact a {
+            color: #5f6c80;
+            font-size: 1.1rem;
+            transition: color 0.15s;
+        }
+
+        .team-contact a:hover {
+            color: #b38b4c;
+        }
+
+        .team-contact .email {
+            font-size: 0.85rem;
+            color: #5f6c80;
+            text-decoration: none;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .team-contact .email i {
+            font-size: 0.8rem;
+        }
+
+        /* results / case portfolio strip */
+        .results-strip {
+            background: #0b2b5c;
+            border-radius: 28px;
+            padding: 2.8rem 3rem;
+            color: #ffffff;
+            margin-bottom: 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .results-strip h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .results-strip h3 i {
+            color: #f5e7c8;
+            margin-right: 12px;
+        }
+
+        .results-strip p {
+            color: #cfdbe9;
+            max-width: 550px;
+            font-size: 1rem;
+        }
+
+        .result-highlight {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-item .big {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #f5e7c8;
+            line-height: 1.2;
+        }
+
+        .result-item .small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #b8c9e0;
+        }
+
+        /* footer */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(15, 23, 42, 0.06);
+            color: #5f6c80;
+            font-size: 0.9rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-brand i {
+            color: #b38b4c;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #5f6c80;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .footer-links a:hover {
+            color: #0b2b5c;
+        }
+
+        /* responsiveness */
+        @media (max-width: 800px) {
+            .portfolio {
+                padding: 1.5rem 1.2rem 2.5rem;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.2rem;
+            }
+
+            .hero {
+                padding: 2rem 1.8rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.8rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-badge {
+                align-self: flex-start;
+            }
+
+            .results-strip {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem 1.8rem;
+            }
+
+            .result-highlight {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .brand-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+
+            .result-highlight {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .practice-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* subtle transitions */
+        a, button, .practice-card, .team-card {
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio">
+        <!-- header: branding + contact -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-scale-balanced"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Team JJO</h1>
+                    <span class="tag">legal · jjoiencrzimsg</span>
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:hello@teamjjo.legal"><i class="fas fa-envelope"></i> hello@teamjjo.legal</a>
+                <a href="tel:+12182514106"><i class="fas fa-phone-alt"></i> (218) 251-4106</a>
+                <a href="#"><i class="fas fa-map-pin"></i> 325 Hamilton Avenue, San Jose, CA 95125</a>
+            </div>
+        </header>
+
+        <!-- hero intro -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="eyebrow">portfolio · legal service</div>
+                <h2>Trusted counsel for <span>complex matters</span></h2>
+                <p>Teamjjoiencrzimsg delivers strategic legal representation with a personal touch. From corporate advisory to litigation, we protect what matters most.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">years experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">cases resolved</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">client satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-badge">
+                <i class="fas fa-gavel"></i>
+                <span>JJO Legal Group</span>
+            </div>
+        </section>
+
+        <!-- practice areas (core legal services) -->
+        <div class="section-title">
+            <i class="fas fa-briefcase"></i> practice areas
+        </div>
+        <div class="section-sub">Deep expertise across a wide range of legal disciplines.</div>
+        <div class="practice-grid">
+            <div class="practice-card">
+                <div class="practice-icon"><i class="fas fa-building"></i></div>
+                <h3>Corporate Law</h3>
+                <p>M&A, governance, compliance, and strategic business counsel for startups to Fortune 500.</p>
+            </div>
+            <div class="practice-card">
+                <div class="practice-icon"><i class="fas fa-gavel"></i></div>
+                <h3>Litigation</h3>
+                <p>Commercial disputes, arbitration, and courtroom advocacy with a proven track record.</p>
+            </div>
+            <div class="practice-card">
+                <div class="practice-icon"><i class="fas fa-house"></i></div>
+                <h3>Real Estate</h3>
+                <p>Transactions, leasing, zoning, and property development — residential and commercial.</p>
+            </div>
+            <div class="practice-card">
+                <div class="practice-icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>Intellectual Property</h3>
+                <p>Trademarks, copyrights, patents, and trade secret protection for innovators.</p>
+            </div>
+        </div>
+
+        <!-- team / attorney portfolio -->
+        <div class="section-title">
+            <i class="fas fa-users"></i> our legal team
+        </div>
+        <div class="section-sub">Meet the partners and senior associates of Teamjjoiencrzimsg.</div>
+        <div class="team-grid">
+            <!-- team member 1 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Jonathan J. Oien</h3>
+                    <div class="team-title">Managing Partner</div>
+                    <p>Corporate strategist with 18 years of experience in cross-border transactions and governance.</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="email"><i class="fas fa-paper-plane"></i> j.oien@teamjjo.legal</a>
+                    </div>
+                </div>
+            </div>
+            <!-- team member 2 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Camila R. Zims</h3>
+                    <div class="team-title">Senior Partner · Litigation</div>
+                    <p>Lead trial attorney with a focus on complex commercial disputes and appellate work.</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="email"><i class="fas fa-paper-plane"></i> c.zims@teamjjo.legal</a>
+                    </div>
+                </div>
+            </div>
+            <!-- team member 3 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Marcus T. Grange</h3>
+                    <div class="team-title">Partner · Real Estate & IP</div>
+                    <p>Advises developers, artists, and tech companies on property and intellectual property.</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="email"><i class="fas fa-paper-plane"></i> m.grange@teamjjo.legal</a>
+                    </div>
+                </div>
+            </div>
+            <!-- team member 4 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="team-info">
+                    <h3>Elena V. Cruz</h3>
+                    <div class="team-title">Senior Associate</div>
+                    <p>Regulatory compliance, data privacy, and emerging technology law specialist.</p>
+                    <div class="team-contact">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="email"><i class="fas fa-paper-plane"></i> e.cruz@teamjjo.legal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- results / case highlights -->
+        <div class="results-strip">
+            <div>
+                <h3><i class="fas fa-trophy"></i> proven results</h3>
+                <p>Teamjjoiencrzimsg has secured favorable outcomes in high-stakes litigation, landmark corporate deals, and intellectual property protection.</p>
+            </div>
+            <div class="result-highlight">
+                <div class="result-item">
+                    <div class="big">$1.2B+</div>
+                    <div class="small">transaction value</div>
+                </div>
+                <div class="result-item">
+                    <div class="big">200+</div>
+                    <div class="small">cases won</div>
+                </div>
+                <div class="result-item">
+                    <div class="big">50+</div>
+                    <div class="small">industry awards</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-brand">
+                <i class="fas fa-scale-balanced"></i>
+                <span>© 2025 Team JJO Legal · jjoiencrzimsg</span>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Disclaimers</a>
+                <a href="#">Contact</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
